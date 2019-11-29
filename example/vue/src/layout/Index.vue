@@ -1,6 +1,6 @@
 <template>
   <el-container class="layout">
-    <el-aside width="201px" class="aside">
+    <el-aside width="150px" class="aside">
       <el-menu
         background-color="#545c64"
         text-color="#fff"
@@ -60,12 +60,24 @@
     name: 'layout'
   }
 </script>
-
+<style lang="scss">
+.el-menu {
+  border: none !important;
+  .el-menu-item {
+    min-width: 150px !important;
+    padding: 0 !important;
+  }
+  .el-submenu__title {
+    padding: 0px !important;
+  }
+} 
+</style>
 <style lang="scss" scoped>
 .layout {
   height: calc(100vh);
   .aside {
     background-color: #545c64;
+    border: none;
   }
   .el-header {
     background-color: #B3C0D1;
