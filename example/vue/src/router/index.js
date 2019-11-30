@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import { Cart, Element, VRouter, Children, Children2 } from '../example'
+import { Cart, Element, VRouter, Children, Children2, Vx } from '../example'
 
 Vue.use(VueRouter)
 
@@ -58,6 +58,11 @@ const routes = [
         }
       }
     ]
+  },
+  {
+    path: '/vx',
+    name: 'vx',
+    component: Vx
   }
 ]
 

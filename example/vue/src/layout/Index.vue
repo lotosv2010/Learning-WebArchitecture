@@ -15,7 +15,7 @@
         <el-submenu index="2">
           <template slot="title"><i class="el-icon-menu"></i>第二课</template>
           <el-menu-item index="/vr/Robin">router</el-menu-item>
-          <el-menu-item index="/home">vuex</el-menu-item>
+          <el-menu-item index="/vx">vuex</el-menu-item>
         </el-submenu>
       </el-menu>
     </el-aside>
