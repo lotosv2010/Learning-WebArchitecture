@@ -1,2 +1,5 @@
 export { default as Cart } from './01/cart/Index.vue'
 export { default as Element } from './01/element/Index.vue'
+export { default as VRouter } from './02/router/Index.vue'
+export { default as Children } from './02/router/Children.vue'
+export { default as Children2 } from './02/router/Children2.vue'
