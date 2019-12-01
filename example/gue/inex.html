@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./lib//compile.js"></script>
+  <script src="./lib/gue.js"></script>
+  <title>gue</title>
+</head>
+<body>
+  <div id="app">
+    <p>{{name}}</p>
+    <p g-text="name"></p> <p>{{age}}</p>
+    <p>
+        {{doubleAge}}
+      </p>
+    <input type="text" g-model="name"> <button @click="changeName">呵呵</button>
+    <div g-html="html"></div>
+  </div>
+  <script>
+    let gue = new Gue({
+      el: '#app',
+      data: {
+        name: "I am test.",
+        age: 12,
+        html: '<button>这是一个按钮</button>'
+      },
+      created() {
+        console.log('start')
+        setTimeout(() => {
+          this.name = 'robin'
+        }, 1500)
+      },
+      methods: {
+        changeName() {
+          this.name = 'hello robin'
+          this.age = 18
+          this.id = 'xx'
+          console.log(1, this)
+        }
+      }
+    })
+  </script>
+</body>
+</html>
