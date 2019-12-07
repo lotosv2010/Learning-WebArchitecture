@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 1.创建对象
+    var person = {
+      name: 'robin',
+      genter: 'man',
+      age: 18,
+      height: 185,
+      go: function() {
+        console.log('go function')
+      }
+    }
+
+    // 2.获取属性
+    console.log(person.genter)
+    console.log(person.go)
+
+    // 3.设置属性
+    person.height = 190;
+    person.weight = 70;
+
+    // 4.删除属性
+    delete person.age
+    console.log(person)
+
+    // 清空对象
+    person = {} // person对象不具有任何人属性
+    person = null; // person对象变量的赋值为null，不再是一个对象
+  </script>
+</body>
+</html>

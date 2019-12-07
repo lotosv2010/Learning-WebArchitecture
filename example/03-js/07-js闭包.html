@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <script>
+    const oDiv = document.querySelectorAll('div')
+    for (let i = 0; i < oDiv.length; i++) {
+      const element = oDiv[i];
+      element.onclick = (function(j) {
+        return function() {
+          console.log(j)
+        }
+      })(i)
+    }
+
+    // ===================================
+    function fn() {
+      var a = 5
+      return function() {
+        a++
+        console.log(a)
+      }
+    }
+
+    var f1 = fn()
+    f1() // 6
+    f1() // 7
+    f1() // 8
+    // 代码执行到35行fn函数执行完毕，返回匿名函数
+    // ---> 一般认为函数执行完毕，变量就会释放，
+    // 但此时由于js引擎发现匿名函数要使用a变量，
+    // 所以a变量并不能得到释放，
+    // 而是把a变量放在匿名函数可以访问到的地方去了
+
+    // ===================================
+    var f2 = fn()
+    // a变量放在匿名函数可以访问到的地方去了
+    f2() // 6
+    var f3 = fn()
+    // 又一次执行了fn，有初始化了一个新的a变量，值为5，返回匿名函数f2
+    // 并且把新的a变量放在了f2可以访问到的地方
+    f3() // 6
+    var f4 = fn()
+    // 又一次执行了fn，有初始化了一个新的a变量，值为5，返回匿名函数f3
+    // 并且把新的a变量放在了f3可以访问到的地方
+    f4() // 6
+
+    // ===================================
+    function q1() {
+      var a = {}
+      return a
+    }
+    var r1 = q1()
+    var r2 = q1()
+    console.log(r1 === r2) // false
+
+    // ===================================
+    function q2() {
+      var a = {}
+      return function() {
+        return a
+      }
+    }
+    var t = q2() // 创建一个新的a对象，把a对象放在t可以访问到的地方去了
+    var t2 = t() // 返回值a就是那个a
+    var t3 = t() // 返回值a还是那个a
+    console.log(t2 === t3) // true
+
+    // ===================================
+    var w3 = q2() // 又创建一个新的a对象，把a对象放在t可以访问到的地方去了
+    var t4 = w3() // 此时获取的又是一个新的a对象
+    console.log(t2 === w3) // false
+
+    // ===================================
+    // 闭包应用
+    var k = (function KTV() {
+      // 为了保护leastPrice变量，将它放在函数内部
+      var leastPrice = 1000
+
+      var total = 0;
+      return {
+        buy: function(price) {
+          total += price
+        },
+        pay: function() {
+          if(total < leastPrice) {
+            console.log('请继续购物')
+          } else {
+            console.log('欢迎下次光临')
+          }
+        },
+        eidtLeast: function(id, price) {
+          if(id === '888') {
+            leastPrice = price
+            console.log('最低消费已改为' + price)
+          } else {
+            console.log('权限不足')
+          }
+        },
+        restLeast: function(id) {
+          if(id === '888') {
+            leastPrice = 1000
+            console.log('最低消费已改为' + leastPrice)
+          } else {
+            console.log('权限不足')
+          }
+        }
+      }
+    })()
+
+    // ===================================
+    // 想要释放p1里面保存的a，只能通过释放p1
+    function p() {
+      var a = 5
+      return function() {
+        a++
+        console.log(a)
+      }
+    }
+    var p1 = p()
+    p1 = null // p1 = undefined
+  </script>
+</body>
+</html>

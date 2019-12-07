@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // js的原型和原型链:
+    // https://www.cnblogs.com/zhoulujun/p/9667651.html
+    // https://www.jianshu.com/p/be7c95714586
+    // http://www.codeceo.com/article/learning-javascript-part-5.html
+    // --------------------1-----------------------
+
+    // 为什么要有继承
+    function Person(name, age) {
+      this.name = name;
+      this.age = age;
+      this.say = function () { }
+    }
+
+    var person1 = new Person();
+    var person2 = new Person();
+    console.log(person1, person2)
+
+    // 问题：p1对象和p2对象的say方法是否是同一个方法：false
+    console.log(person1.say === person2.say);
+
+    // 由于say方法可能功能相似，但是不是同一个方法(没有指向同一块内存，会造成内存浪费)
+    // 解决方法：把say方法写在他们共同的(父对象)中
+    // 其实他们共同的父对象，就可以通过：Person.prototype来获取
+    // -->只要把say方法写在Person.prototype中，那么say方法就是同一个方法
+    Person.prototype.run = function () {
+      console.log('running')
+    }
+    // 此时p1和p2都可以访问到run方法
+    person1.run()
+    person2.run()
+    // 验证person1.run 和person2.run是否为同一个方法？
+    console.log(person1.run === person2.run) // true
+    console.log(person1.run === Person.prototype.run) // trun
+    // 这种方法避免了内存浪费
+
+    // 结论：只要往某个构造函数的prototype对象中添加某个属性、方法，
+    // 那么这样的属性、方法都可以被所有的构造函数的实例所共享
+
+
+    // --------------------2原型对象-----------------------
+    // ---> 这里的【构造函数的prototype对象】称之为原型对象
+    // Person.prototype 是 p1 p2的原型对象
+    // 也就是Person.prototype 是Person构造函数的【实例】的原型对象
+
+    // 问题：Person的原型对象是谁？
+    // --->首先要知道Person的构造函数: --->Function
+    // --->所以Person的原型对象是：Function.prototype
+
+    // 问题：person1的原型对象是谁？
+    // --->首先要知道person1是谁创建的？: --->Person
+    // --->所以person1的原型对象是：Person.prototype
+
+
+    // --------------------3继承-----------------------
+    // 3.1 继承方式的第一种实现：原型链继承
+    function Dog() { }
+    var d1 = new Dog();
+    // 为了让d1又一个叫的方法，
+    // 不行： d1.say = function() {}
+    // 正确：
+    Dog.prototype.say = function () {
+      console.log('wangwang...')
+    }
+
+    // 3.2 继承方式的第二种实现：原型链继承改良
+    //目的：把say方法放在tom的原型对象中(Cat.prototype)
+    function Cat(name) {
+      this.name = name;
+    }
+    var tom = new Cat("汤姆");
+    Cat.prototype.say = function () { }
+
+    //问题：
+    Cat.prototype.s1 = function () { }
+    Cat.prototype.s2 = function () { }
+    Cat.prototype.s3 = function () { }
+    Cat.prototype.s4 = function () { }
+    Cat.prototype.s5 = function () { }
+    //通过上面的方式，给tom的原型对象添加了好多方法，也就是让tom拥有了好多方法，但是代码产生了不少的冗余(重复)
+
+    //-->为了减少这种重复，改良版：
+    Cat.prototype = {
+      a1: function () { },
+      a2: function () { },
+      a3: function () { },
+      a4: function () { },
+      a5: function () { }
+    }
+    console.log(tom.s1);    //可以访问
+    console.log(tom.a1);    //undefined
+    //原因：tom对象在创建的时候已经有了一个确定的原型对象，就是旧的Cat.prototype
+    //由于Cat.prototype后面被重新赋值，但是tom对象的原型对象却没有改变，所以tom对象并不能访问到新原型对象中的a1-a5方法
+
+    //如何解决这个问题？
+    //-->先改变原型、再创建对象
+
+    // 3.3 继承方式的第二种实现：原型链继承改良
+    function Tiger() {
+
+    }
+    Tiger.prototype = {
+      constructor: Tiger,
+      a: function () {
+
+      },
+      b: function () {
+
+      }
+    }
+    //创建tiger实例，此时的tiger实例的原型对象是新原型，所以tiger可以访问到新原型中的属性和方法(a/b)
+    var tiger = new Tiger();
+    console.log(tiger);
+    console.log(tiger.a);
+    console.log(tiger.b);
+
+    // 3.3 继承方式的第三种实现：拷贝继承
+    // 1 已经拥有的对象o
+    var o = {
+      gender: 'man',
+      grade: '3',
+      group: '5',
+      name: 'robin',
+      child: {}
+    }
+    // 创建一个o对象的拷贝(克隆)：for...in循环
+    var o1 = {}
+    for (const key in o) {
+      if (o.hasOwnProperty(key)) {
+        const value = o[key];
+        o1[key] = value
+      }
+    }
+    o1.child.name = 'jack'
+    console.log(o)
+
+    // 3.4 继承方式的第四种实现：原型式继承
+
+    // 3.5 继承方式的第四种实现：借用构造函数实现继承
+    function Animal(name, age) {
+      this.name = name;
+      this.age = age;
+    }
+    function Person(name, age, address) {
+      Animal.call(this, name, age);
+      //this.name=name;
+      //this.age=age;
+      this.address = address;
+    }
+  </script>
+</body>
+
+</html>

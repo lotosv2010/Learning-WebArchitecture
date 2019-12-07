@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var gender = 'man'
+    function fn() {
+      console.log('2', gender) // man
+      console.log('2', age) // undefined
+      // console.log('2', height) // height is not defined
+
+      return function() {
+        var height = 180
+        console.log('3', gender) // man
+        console.log('3', age) // undefined
+        console.log('3', height) // 180
+
+      }
+      var age = 5
+    }
+    fn()
+    fn()()
+
+    // ==============================
+    function parent(callnack) {
+      var age = 10
+      callnack()
+    }
+    parent(function() {
+      console.log(age) // age is not defined
+    })
+    // 分析： age变量
+    // 1.查找当前作用域：并没有
+    // 2.查找上一级作用域：全局作用域
+    // --> 难点：看上一级作用域，不是看函数在哪里调用，而是看函数在哪里编写
+    // --> 因为这种特别，我们通常会把作用域说成：词法作用域
+  </script>
+</body>
+</html>
