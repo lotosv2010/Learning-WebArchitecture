@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <input type="file" name="" id="">
+  <script>
+    var dom = document.querySelector('input')
+    dom.onchange = function() {
+      // for (const key in this) {
+      //   console.log(key, this[key])
+      // }
+
+      // 获取文件
+      var files = this.files
+      console.log(files)
+
+      // 创建读取器
+      var reader = new FileReader()
+      console.log(reader)
+
+      // 开始读取
+      reader.readAsText(files[0])
+
+      // 获取读取结果
+      // 当文件读取完成后，才可以获取文本信息内容
+      reader.onload = function() {
+        console.log(reader.result)
+      }
+    }
+  </script>
+</body>
+</html>

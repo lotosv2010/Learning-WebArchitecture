@@ -254,7 +254,7 @@ ctx.stroke()	   描边
 
 ctx.beginPath()；   开启新的图层
 
-演示： strokeStyle="值"
+颜色： strokeStyle="值"
 线宽： linewidth="值"   备注：不需要带单位
 
 线连接方式：   lineJoin: round | bevel | miter (默认)
