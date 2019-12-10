@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 箭头函数和普通匿名函数有哪些不同？
+    // - 函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象。
+    // - 不可以当作构造函数，也就是说，不可以使用new命令，否则会抛出一个错误。
+    // - 不可以使用arguments对象，该对象在函数体内不存在。如果要用，可以用 rest 参数代替。
+    // - （不常用）不可以使用yield命令，因此箭头函数不能用作 Generator 函数。 
+    //     - generator函数现在经常用async替代
+
+    // 1
+    var p = {
+      age: 18,
+      say: () => {
+        console.log(this) // this由外层函数决定，这里指向window
+      },
+      // 箭头函数简写
+      run() {
+        console.log(this) // p
+      },
+      jump:() => {
+        setTimeout(() => {
+          console.log(this) // window
+        }, 100)
+      },
+      eat: function() {
+        setTimeout(() => {
+          console.log(this) // p
+        }, 100)
+      }
+    }
+    p.run()
+    p.say()
+    p.jump()
+    p.eat()
+  </script>
+</body>
+</html>
