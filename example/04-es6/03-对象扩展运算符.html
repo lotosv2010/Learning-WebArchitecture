@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 1.对象
+    var car = {
+      brand: 'BMW',
+      price: 368000,
+      length: '3m'
+    }
+
+    // 克隆一个对象
+    var car2 = { ...car }
+    console.log(car2)
+
+    // 覆盖属性
+    var car3 = { ...car, length: '4m' }
+    console.log(car3)
+
+    // 增加属性
+    var car4 = { ...car, type: 'suv' }
+    console.log(car4)
+
+    // 2.数组
+    var arr = [1, 2, 3 ,4, 5]
+
+    // 克隆
+    var arr2 = [...arr]
+    console.log(arr2)
+  </script>
+</body>
+</html>

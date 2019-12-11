@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function f1() {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          console.log('第一步')
+          resolve({name: 'robin'})
+        }, 1000)
+      })
+    };
+
+    // 方式一
+    // async function f2() {
+    //   var res = await f1()
+    //   console.log(res)
+    // }
+    // f2()
+
+    // 方式二
+    // (async function() {
+    //   var res = await f1()
+    //   console.log(res)
+    // })();
+
+
+    // 方式三
+    var o = {
+      say: async () => {
+        console.log('say')
+        var res = await f1()
+        console.log(res)
+      },
+      run:async () => {
+        console.log('run')
+        var res = await f1()
+        console.log(res)
+      }
+    };
+
+    // 先执行say 再执行run
+    // o.say()
+    // o.run()
+    (async () => {
+      await o.say()
+      await o.run()
+    })();
+  </script>
+</body>
+</html>

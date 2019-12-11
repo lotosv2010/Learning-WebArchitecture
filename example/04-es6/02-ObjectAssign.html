@@ -8,13 +8,18 @@
 </head>
 <body>
   <script>
-    // https://www.cnblogs.com/zhoulujun/p/9667651.html
-    function Animal() {}
-    var cat = new Animal()
-    console.log(cat)
-    console.log(cat.__proto__)
-    console.log(Animal.prototype)
-    console.log(cat.__proto__.__proto__)
+    // Object.assign 浅拷贝
+    var source = {
+      name: 'robin',
+      age: 18,
+      height: 170
+    }
+    var target = {}
+    Object.assign(target, source)
+    console.log(target)
+
+    var obj = Object.assign({}, source)
+    console.log(obj)
   </script>
 </body>
 </html>

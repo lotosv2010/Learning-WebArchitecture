@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // bind
+    // 方法一
+    // 1.bind放在函数的原型中
+    Function.prototype._bind = function() {
+      var self = this
+      var context = Array.prototype.shift.call(arguments)
+      var args = Array.prototype.slice.call(arguments)
+      return function() {
+        self.apply(context, Array.prototype.concat.call(args, Array.prototype.slice.call(arguments)))
+      }
+    }
+    function fn(...args) {
+      console.log(...args)
+    }
+    fn._bind({name: 'robin'}, 20, 180)(999)
+
+    // 方法二
+    Function.prototype.$bind = function(context, ...rest) {
+      return (...args) => {
+        // 注意：这里不能使用 arguments
+        this.apply(context, [...rest, ...args])
+      }
+    }
+    fn.$bind({name: 'jack'}, 28, 170)(888)
+  </script>
+</body>
+</html>

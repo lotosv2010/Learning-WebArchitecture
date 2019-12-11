@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // Axios源码深度剖析: https://www.imooc.com/article/32292?block_id=tuijian_wz
+    // 把异步函数封装在一个promise对象中
+    // 解决地狱回调
+    function fn() {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          console.log('第一步')
+          resolve({name: 'robin'})
+        }, 1000)
+      })
+    }
+
+    function fn2() {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          console.log('第二步')
+          resolve({name: 'jack'})
+        }, 1000)
+      })
+    }
+
+    function fn3() {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          console.log('第三步')
+          resolve({name: 'rose'})
+          // reject({error: '400'})
+        }, 1000)
+      })
+    }
+
+    fn().then(res => {
+      // console.log(res)
+      return fn2()
+    }, error => {
+      console.error(error)
+    }).then(res => {
+      // console.log(res)
+      return fn3()
+    }, error => {
+      console.error(error)
+    }).then(res => {
+      // console.log(res)
+      console.log('完成')
+    }).catch(error => {
+      console.log(error)
+    })
+  </script>
+</body>
+</html>
