@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./lib/require.js"></script>
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .box {
+      text-align: center;
+      width: 150px;
+    }
+    
+    .btn {
+      height: 40px;
+      background-color: cadetblue;
+      line-height: 40px;
+      margin: 10px 0 0 0;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div id="box" class="btn">加载user模块</div>
+    <div id="box2" class="btn">加载product模块</div>
+  </div>
+  
+  <script>
+    // 实现点击div，出现用户模块的逻辑
+    // ---> 需要改造user模块，把它改成‘按需加载’的加载
+    // ---> 形参的顺序和模块的顺序保持一直
+    require(['./js/02/user', './js/02/product'], function(user, product) {
+      var box = document.querySelector('#box')
+      var box2 = document.querySelector('#box2')
+      box.onclick = function() {
+        // 调用用户模块逻辑
+        user()
+      }
+      box2.onclick = function() {
+        // 调用商品模块逻辑
+        product.init()
+      }
+    })
+  </script>
+</body>
+</html>

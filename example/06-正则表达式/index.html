@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // const reg = new RegExp('a')
+    const reg = /a/
+    console.log(reg.test('abc'));
+
+    // ---------------------------
+    const reg2 = /abc/
+    console.log(reg2.test('bcd'))
+
+    // ---------------------------
+    // . 表示除了换行符(\r \n)以外的任意字符
+    const reg3 = /./
+    console.log('.', reg3.test('bcd'))
+    console.log('.', reg3.test('.'))
+
+    // ---------------------------
+    // \d 表示数字
+    const reg4 = /\d/
+    console.log('\d', reg4.test('abc'))
+    console.log('\d', reg4.test('123'))
+
+    // ---------------------------
+    // \D 是\d的取反结果，表示不是数字
+    const reg5 = /\D/
+    console.log('\D', reg5.test('abc'))
+    console.log('\D', reg5.test('123'))
+
+    // ---------------------------
+    // \w 匹配字母、数字、下划线 ，三者满足其一即可
+    const reg6 = /\w/
+    console.log('\w', reg6.test('abc'))
+    console.log('\w', reg6.test('123'))
+    console.log('\w', reg6.test('_123'))
+    console.log('\w', reg6.test('#@%^'))
+
+
+    // ---------------------------
+    // \W 是\w的取反
+    const reg7 = /\W/
+    console.log('\W', reg7.test('abc'))
+    console.log('\W', reg7.test('123'))
+    console.log('\W', reg7.test('_123'))
+    console.log('\W', reg7.test('#23'))
+
+    // ---------------------------
+    // \s 表示一个空白字符（例如：\r \n \t 空格 。。。）
+    const reg8 = /\s/
+    console.log('\s', reg8.test('ab c'))
+    console.log('\s', reg8.test('12\r3'))
+
+    // ---------------------------
+    // \S 是\s的取反
+    const reg9 = /\S/
+    console.log('\S', reg9.test('ab c'))
+    console.log('\S', reg9.test('12\r3'))
+    console.log('\S', reg9.test('\r\n\t '))
+
+    // ---------------------------
+    // \ 转义字符
+    const reg10 = /\//
+    console.log('\/', reg10.test('111\/'))
+    console.log('\/', reg10.test('111\\'))
+
+    // ---------------------------
+    // []:匹配一个字符，这个字符必须是：1/a/2/b/3其中一种，
+    //    如果是就表示满足，如果不是就不满足
+    const reg11 = /[1a23b]/
+    console.log('[1a23b]', reg11.test('123'))
+    console.log('[1a23b]', reg11.test('abc'))
+    console.log('[1a23b]', reg11.test('f'))
+
+
+    // ---------------------------
+    // [^]:匹配一个字符，但是这个字符既不是1 并且 不是2 并且 不是3 
+    const reg12 = /[^123]/
+    console.log('[^123]', reg12.test('123'))
+    console.log('[^123]', reg12.test('abc'))
+
+    // ---------------------------
+    // ^ 表示字符串最左边
+    // $ 表示字符串最右边
+    const reg13 = /^123/
+    console.log('^123', reg13.test('12377'))
+    const reg14 = /123$/
+    console.log('123$', reg14.test('43434abc123'))
+
+    // ---------------------------
+    // `*` 出现0次或多次
+    const reg15 = /\d*/
+    console.log('\d*', reg15.test('12377'))
+    console.log('\d*', reg15.test('a1c'))
+
+
+    // ---------------------------
+    // `()` 分组
+    const reg16=/(\d{3,4})-(\d{7,8})/;
+    console.log('()', ('021-33335555').match(reg16))
+    console.log("021-33335555".replace(/(\d{3,4})-(\d{7,8})/,'区号是：$1,$2'))
+  </script>
+</body>
+</html>

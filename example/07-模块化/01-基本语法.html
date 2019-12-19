@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./lib/require.js"></script>
+</head>
+<body>
+  <script>
+    // 参考资料：
+    // http://www.ruanyifeng.com/blog/2012/10/javascript_module.html
+    // https://www.cnblogs.com/chenguangliang/p/5856701.html
+    // https://github.com/seajs/seajs/issues/277
+    require(['./js/01/cart', './js/01/user'], function() {
+      console.log('html')
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 1 -->
+  <div onclick="console.log('方式1')">方式1</div>
+  <div id="box" onclick="f1()">方式2</div>
+  <div id="box2">方式3</div>
+  <div id="box4">DOM2</div>
+  <div id="box5">box5</div>
+  <script>
+
+    // 2
+    function f1() {
+      console.log('方式2')
+    }
+
+    // 3
+    var box2 = document.querySelector('#box2');
+    box2.onclick = function() {
+      console.log('方式3')
+    }
+
+    // 以上3中都是属性DOM0时代的事件处理方式
+    // DOM0:指的是标准诞生之前浏览器提供的对DOM的相关操作
+    // 存在问题：事件只能绑定一次，如果多次绑定，会导致覆盖
+
+    // DOM1
+    // 这种问题在DOM1中并没有得到解决
+
+    // DOM2
+    // 一直到DOM2才得到解决
+    // ---> dom.addEventListener('click', function(e){
+    //        // 获取事件对象：e
+    //        // 阻止冒泡：e.stopPropagation()
+    //        // 阻止默认行为：e.preventDefault()
+    //        // 事件末尾，通过return false同事实现阻止冒泡和默认事件
+    //    })
+    // --->对同一个元素绑定了多个类型事件，事件触发顺序会按照绑定顺序的顺序触发
+    // --->事件解绑：dom.removeEventListener('click', function(e){})
+    // --->addEventListener支持事件流，事件流分为3个阶段：捕获-->目标元素阶段-->冒泡
+    // --------->dom.addEventListener('click', callback, false)
+    // --------->其中第三个参数：false表示冒泡阶段触发，true表示捕获阶段触发
+
+    // 在DOM0事件到DOM2事件之间IE又出来捣乱了（IE6/7/8）
+    // --->dom.attachEvent('onclick', function(){
+    //        // 获取事件对象：window.event
+    //        // 阻止冒泡：window.event.cancelBubble = true
+    //        // 阻止默认行为：window.event.returnValue = false
+    //    })
+    // --->对同一个元素绑定了多个类型事件，事件触发顺序会按照倒序的方式触发
+
+
+    // console.log(function(){} == function(){}) // false
+    // console.log(new Function() == new Function()) // false
+    // console.log(new Object() == new Object()) // false
+    // console.log({} == {}) // false
+
+    var box4 = document.querySelector('#box4')
+    function c1() {
+      console.log(1)
+    }
+    box4.addEventListener('click', c1)
+    box4.addEventListener('click', function() {
+      console.log(2)
+    })
+    box4.addEventListener('click', function() {
+      console.log(3)
+    })
+    box4.removeEventListener('click', c1)
+
+
+    var box5 = document.querySelector('#box5');
+    box5.addEventListener('click', function f1() {
+      console.log('box5');
+      // 1.不推荐
+      // var _this = arguments.callee; // 当前函数本身
+      // box5.removeEventListener('click', _this)
+
+      // 2.由于严格模式的诞生，arguments.callee被禁用了
+      // --> f1可以在函数内部任意访问，f1指向当前函数本身
+      box5.removeEventListener('click', f1)
+    })
+
+    // ------------------
+    function caller1() {
+      console.log(caller1.caller);
+    }
+    // caller1(); null
+    function caller2() {
+      caller1(); // caller2() {}
+    }
+    caller2()
+    // 总结：caller用来表示当前函数是在那个函数内部调用的
+    // 如果本次是在某个函数内部调用的，那么caller指向该函数
+    // 如果本次不是在任何函数内部调用的，那么caller指向null
+    // es5严格模式已被废弃
+  </script>
+</body>
+</html>

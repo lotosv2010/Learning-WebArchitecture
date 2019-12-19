@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="./index.js"></script>
+  <!-- <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script> -->
   <title>Document</title>
 </head>
 <body>
@@ -12,14 +13,62 @@
   <div>2222</div>
   <div>3333</div>
   <script>
-    $('div').css('color', 'red')
-    var ext1 = $.extend({}, {a: 10}, {b: 20})
-    console.log(ext1)
+    $('div').css('color', 'red').css('fontSize', '20px')
+    var p = {}
+    var ext1 = $.extend(p, {a: 10}, {b: 20}, {c: 30})
+    console.log(p)
     $.fn.extend({
       getData() {},
       setData() {}
     })
-    console.log($())
+    console.dir($)
+
+    $.each([1, 2], function(item, index) {
+      console.log(this, item, index)
+    })
+
+    $.each({name: 'robin', age: 18, sex: 'man', length: -1}, function(item, index) {
+      console.log(this, item, index)
+    })
+
+    console.log($.type(1), $.type(null), $.type('123'))
+    // $.ajax({
+    //   url: 'https://scmw.sit.sf-express.com:45474/scmw/rest/tenant/order/get',
+    //   method: 'get',
+    //   data: {
+    //     orderType: 'SALE_ORDER'
+    //   },
+    //   async : true,
+    //   success(data) {
+    //     console.log(data)
+    //   },
+    //   error(error) {
+    //     console.log(error)
+    //   }
+    // })
+
+    $('div').each(function(item, index) {
+      console.log(item, index)
+    })
+
+    console.log($('div').css('color'));
+
+    $('div').css({
+      background: 'yellow',
+      height: '40px',
+      border: '1px solid green'
+    })
+
+    $('div').hide()
+    $('div').show()
+
+    $('div').toggle() // hide
+    $('div').toggle() // show
+    $('div').on('click', function(e){
+      console.log(this.innerHTML)
+    })
+    $('div').off('click');
+    // $().attr()
   </script>
 </body>
 </html>
