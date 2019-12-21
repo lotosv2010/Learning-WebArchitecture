@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <h1>this is home page</h1>
+    <cube-button :primary="true" @click="logout">注销</cube-button>
   </div>
 </template>
 
@@ -12,6 +13,12 @@ export default {
   name: 'home',
   components: {
     // HelloWorld
+  },
+  methods: {
+    logout() {
+      this.$store.dispatch('logout')
+      this.$router.push('/login')
+    }
   }
 }
 </script>

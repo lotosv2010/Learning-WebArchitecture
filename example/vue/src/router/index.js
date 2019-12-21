@@ -14,7 +14,15 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: Home
+    component: Home,
+    meta: {
+      auth: true
+    }
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: () => import('../views/Login.vue')
   },
   {
     path: '/about',
@@ -22,39 +30,57 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
+    meta: {
+      auth: false
+    }
   },
   {
     path: '/cart',
     name: 'cart',
-    component: Cart
+    component: Cart,
+    meta: {
+      auth: true
+    }
   },
   {
     path: '/ele',
     name: 'ele',
-    component: Element
+    component: Element,
+    meta: {
+      auth: true
+    }
   },
   {
     path: '/vr/:username',
     name: 'vrouter',
     props: true,
     component: VRouter,
-    beforeEnter: (to, from, next) => {
-      window.console.log('beforEnter', to, from)
-      next()
+    // beforeEnter: (to, from, next) => {
+    //   window.console.log('beforEnter', to, from)
+    //   next()
+    // },
+    meta: {
+      auth: true
     },
     children: [
       {
         path: 'children',
         name: 'children',
-        component: Children
+        component: Children,
+        meta: {
+          auth: true
+        }
       },
       {
         path: 'children2',
         name: 'children2',
         components: {
           default: Children,
-          children2: Children2
+          children2: Children2,
+          meta: {
+            auth: true
+          }
         }
       }
     ]
@@ -62,7 +88,10 @@ const routes = [
   {
     path: '/vx',
     name: 'vx',
-    component: Vx
+    component: Vx,
+    meta: {
+      auth: true
+    }
   }
 ]
 

@@ -17,18 +17,18 @@
         return this.$route.params.username
       }
     },
-    beforeRouteEnter(to, from, next) {
-      window.console.log('beforeRouteEnter', to, from)
-      next()
-    },
-    beforeRouteUpdate(to, from, next) {
-      window.console.log('beforeRouteUpdate', to, from)
-      next()
-    },
-    beforeRouteLeave(to, from, next) {
-      window.console.log('beforeRouteLeave', to, from)
-      next()
-    }
+    // beforeRouteEnter(to, from, next) {
+    //   window.console.log('beforeRouteEnter', to, from)
+    //   next()
+    // },
+    // beforeRouteUpdate(to, from, next) {
+    //   window.console.log('beforeRouteUpdate', to, from)
+    //   next()
+    // },
+    // beforeRouteLeave(to, from, next) {
+    //   window.console.log('beforeRouteLeave', to, from)
+    //   next()
+    // }
   }
 </script>
 
