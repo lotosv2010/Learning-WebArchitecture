@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import app from './modules/index'
 import user from './modules/user'
+import goods from './modules/goods'
+import cart from './modules/cart'
 import getters from './getters'
 
 Vue.use(Vuex)
@@ -22,7 +24,9 @@ export default new Vuex.Store({
   },
   modules: {
     app,
-    user
+    user,
+    goods,
+    cart
   },
   getters
 })

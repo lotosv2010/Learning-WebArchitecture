@@ -8,39 +8,17 @@ import ElementUI from 'element-ui'
 import './plugins/element.js'
 import store from './store'
 import interceptors from './interceptors'
+import {createAPI} from 'cube-ui'
+import CartAnim from '@/components/CartAnim'
+import create from './utils/create'
 
 Vue.use(ElementUI)
 
 Vue.config.productionTip = false
 
-router.beforeEach((to, from, next) => {
-  if(to.meta.auth) {
-    // 需要登陆
-    const token = localStorage.getItem('token');
-    if(token) {
-      next()
-    } else {
-      next({
-        path: '/login',
-        query: {
-          redirect: to.path
-        }
-      })
-    }
-  } else {
-    // 不需要登陆验证
-    next()
-  }
-})
-
-// router.beforeResolve((to, from, next) => {
-//   window.console.log('beforeResolve', to, from)
-//   next()
-// })
-
-// router.afterEach((to, from) => {
-//   window.console.log('afterEach', to, from)
-// })
+// 给vue注册实例方法，方法名$createCartAnim
+createAPI(Vue, CartAnim, ['transitionend'])
+Vue.prototype.$create = create;
 
 const vm = new Vue({
   router,

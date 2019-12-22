@@ -1,15 +1,18 @@
 <template>
   <div id="app">
-    <layout />
+    <!-- <layout /> -->
+    <shop />
   </div>
 </template>
 
 <script>
-import Layout from './layout/Index.vue'
+// import Layout from './layout/Index.vue'
+import Shop from './views/Shop'
 export default {
   name: 'app',
   components: {
-    Layout
+    // Layout,
+    Shop
   }
 }
 </script>
