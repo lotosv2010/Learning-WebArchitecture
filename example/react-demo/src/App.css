@@ -3,8 +3,15 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 40px;
+  /* height: 40vmin; */
   pointer-events: none;
+}
+
+h4 {
+  text-align: left;
+  width: 100%;
+  padding-left: 30px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
