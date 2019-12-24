@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Button } from 'antd';
 
 export default class Order extends Component {
   constructor(props) {
@@ -22,9 +23,9 @@ export default class Order extends Component {
               (<tr key={cart.id}>
                 <td>{cart.name}</td>
                 <td>
-                  <button onClick={() => this.props.minus(cart)}>-</button>
+                  <Button type="danger" size="small" onClick={() => this.props.minus(cart)}>-</Button>
                   {cart.count}
-                  <button onClick={() => this.props.add(cart)}>+</button>
+                  <Button type="danger" size="small" onClick={() => this.props.add(cart)}>+</Button>
                 </td>
               </tr>)
             )}

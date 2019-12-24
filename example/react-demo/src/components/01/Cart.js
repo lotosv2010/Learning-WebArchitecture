@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import Order from './Order'
+import Order from './Order';
+import { Button, Input } from 'antd';
 
 class Cart extends Component {
   constructor(props) {
@@ -98,9 +99,9 @@ class Cart extends Component {
     return (
       <div>
         <p>{this.props.title && this.props.title}</p>
-        <div><input type="text" value={this.state.text} onChange={this.textChange} /><button onClick={this.addGood}>添加商品</button></div>
+        <div><Input type="text" value={this.state.text} onChange={this.textChange} /><Button type="primary" size="small" onClick={this.addGood}>添加商品</Button></div>
         <ul>
-          {this.state.goods.map(good => <li key={good.id}>{good.name}<button onClick={(e) => this.addToCart(e, good)}>添加到购物车</button></li>)}
+          {this.state.goods.map(good => <li key={good.id}>{good.name}<Button type="primary" size="small" onClick={(e) => this.addToCart(e, good)}>添加到购物车</Button></li>)}
         </ul>
         <Order title="购物车" carts={this.state.carts} add={this.add} minus={this.minus} />
       </div>

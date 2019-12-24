@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import CompType, { CompTypeFunc } from './components/01/CompType'
 import Clock from './components/01/Clock'
 import Cart from './components/01/Cart'
@@ -32,9 +32,8 @@ function App() {
         <hr style={{width: '100%'}} />
         <h4>5.生命周期</h4>
         {/* https://www.jianshu.com/p/b331d0e4b398 */}
-        <a href="https://www.jianshu.com/p/b331d0e4b398">生命周期</a>
+        <a href="https://www.jianshu.com/p/b331d0e4b398" className="App-link">生命周期</a>
         <br />
-        <hr style={{width: '100%'}} />
       </header>
     </div>
   );
