@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Input } from 'antd';
+import { Button, Input, List } from 'antd';
 
 class Cart extends Component {
   constructor(props) {
@@ -47,11 +47,17 @@ class Cart extends Component {
   render() {
     return (
       <div>
-        <p>{this.props.title && this.props.title}</p>
-        <div><Input type="text" value={this.state.text} onChange={this.textChange} /><Button type="primary" size="small" onClick={this.addGood}>添加</Button></div>
-        <ul>
-          {this.state.goods.map(good => <li key={good.id}>{good.name}</li>)}
-        </ul>
+        <List
+          header={<div>{this.props.title && this.props.title}</div>}
+          footer={<div><Input type="text" value={this.state.text} onChange={this.textChange} /><Button type="primary" size="small" onClick={this.addGood}>添加</Button></div>}
+          bordered
+          dataSource={this.state.goods}
+          renderItem={good => (
+            <List.Item key={good.id}>
+              <List.Item.Meta title={good.name}></List.Item.Meta>
+            </List.Item>
+          )}
+        ></List>
       </div>
     );
   }
