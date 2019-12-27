@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.scss';
+import { Provider } from 'react-redux'
 import CompType, { CompTypeFunc } from './components/01/CompType'
 import Clock from './components/01/Clock'
 import Cart from './components/01/Cart'
@@ -15,6 +16,11 @@ import Composition  from './components/02/Composition'
 import Hook  from './components/03/Hook'
 import Context  from './components/03/Context'
 import KForm  from './components/03/KForm'
+import Redux  from './components/04/Redux'
+import ReactRedux  from './components/04/ReactRedux'
+import ReactReduxDecorators  from './components/04/ReactReduxDecorators'
+import Router  from './components/04/Router'
+import store from './store'
 
 
 function App() {
@@ -84,6 +90,28 @@ function App() {
         <hr style={{width: '100%'}} />
         <h4>15.组件设计与实现</h4>
         <KForm />
+
+        <hr style={{width: '100%'}} />
+        <h4>16.Redux</h4>
+        <Redux />
+
+        <hr style={{width: '100%'}} />
+        <h4>17.React Redux</h4>
+        <Provider store={store}>
+          <ReactRedux />
+        </Provider>
+
+        <hr style={{width: '100%'}} />
+        <h4>18.React Redux Decorators</h4>
+        <Provider store={store}>
+          <ReactReduxDecorators />
+        </Provider>
+
+        <hr style={{width: '100%'}} />
+        <h4>19.Router</h4>
+        <Provider store={store}>
+          <Router />
+        </Provider>
         <br />
       </header>
     </div>
