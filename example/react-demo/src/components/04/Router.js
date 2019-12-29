@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import { BrowserRouter, Link, Route, Switch, Redirect } from 'react-router-dom'
-import { Menu, Icon, Button } from 'antd';
+import { Menu, Icon, Button, Input } from 'antd';
 import { connect } from 'react-redux';
 import { login } from '../../store/user.redux'
 
@@ -52,15 +52,41 @@ function Detail(props) {
 }
 
 // 登录组件
+// const Login = connect(
+//   state => ({
+//     isLogin: state.user.isLogin,
+//     loading: state.user.loading
+//   }),
+//   { login }
+// )(function({ location, isLogin, login, loading }) {
+//   const redirect = location.state.redirect || "/";
+
+//   if (isLogin) {
+//     return <Redirect to={redirect} />;
+//   }
+
+//   return (
+//     <div>
+//       <p>用户登录</p>
+//       <hr />
+//       <Button type="primary" onClick={login} disabled={loading}>
+//         {loading ? "登录中..." : "登录"}
+//       </Button>
+//     </div>
+//   );
+// });
+
+// 登录组件
 const Login = connect(
   state => ({
     isLogin: state.user.isLogin,
-    loading: state.user.loading
+    loading: state.user.loading,
+    error: state.user.error // 登录错误信息
   }),
   { login }
-)(function({ location, isLogin, login, loading }) {
+)(function({ location, isLogin, login, loading, error }) {
   const redirect = location.state.redirect || "/";
-
+  const [uname, setUname] = useState(""); // 用户名输入状态
   if (isLogin) {
     return <Redirect to={redirect} />;
   }
@@ -69,7 +95,15 @@ const Login = connect(
     <div>
       <p>用户登录</p>
       <hr />
-      <Button type="primary" onClick={login} disabled={loading}>
+      {/* 登录错误信息展示 */}
+      {error && <p>{error}</p>}
+      {/* 输入用户名 */}
+      <Input
+        type="text"
+        onChange={e => setUname(e.target.value)}
+        value={uname}
+      />
+      <Button onClick={() => login(uname)} disabled={loading}>
         {loading ? "登录中..." : "登录"}
       </Button>
     </div>
@@ -89,13 +123,13 @@ const PrivateRoute = connect(state => ({ isLogin: state.user.isLogin }))(
           isLogin ? (
             <Comp />
           ) : (
-            <Redirect
-              to={{
-                pathname: "/login",
-                state: { redirect: props.location.pathname }
-              }}
-            />
-          )
+              <Redirect
+                to={{
+                  pathname: "/login",
+                  state: { redirect: props.location.pathname }
+                }}
+              />
+            )
         }
       />
     );
@@ -138,7 +172,7 @@ export default class Router extends Component {
                 <Menu.Item key="/about">
                   <Link to='/about'><Icon type="mail" />关于</Link>
                 </Menu.Item>
-                </Menu>
+              </Menu>
             </div>
             {/* 路由配置：路由即组件 */}
             {/* 路由匹配默认是包容性质 */}
