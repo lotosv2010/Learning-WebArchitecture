@@ -1,6 +1,4 @@
 const mongoose = require('mongoose')
-
-// 1.连接
 mongoose.set('useFindAndModify', false)
 mongoose.connect('mongodb://root:root@localhost:27017/learning',{
   useNewUrlParser: true,
