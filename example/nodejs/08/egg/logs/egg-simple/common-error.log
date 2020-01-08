@@ -1,0 +1,180 @@
+2020-01-08 09:08:00,668 ERROR 63150 nodejs.ClusterClientNoResponseError: client no response in 3426130ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_cluster-client@3.0.1@cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:531:17)
+    at processTimers (internal/timers.js:475:7)
+name: "ClusterClientNoResponseError"
+pid: 63150
+hostname: RobindeMacBook-Pro.local
+
+2020-01-08 09:32:34,059 ERROR 63150 nodejs.ClusterClientNoResponseError: client no response in 633147ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_cluster-client@3.0.1@cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:531:17)
+    at processTimers (internal/timers.js:475:7)
+name: "ClusterClientNoResponseError"
+pid: 63150
+hostname: RobindeMacBook-Pro.local
+
+2020-01-08 09:49:03,129 ERROR 53860 [-/127.0.0.1/-/0ms GET /] nodejs.SequelizeAccessDeniedError: Access denied for user 'root'@'172.17.0.1' (using password: NO)
+    at /Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_sequelize@5.21.3@sequelize/lib/dialects/mysql/connection-manager.js:125:19
+    at tryCatcher (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_bluebird@3.7.2@bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:547:31)
+    at Promise._settlePromise (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:604:18)
+    at Promise._settlePromise0 (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:649:10)
+    at Promise._settlePromises (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:725:18)
+    at _drainQueueStep (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:93:12)
+    at _drainQueue (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:86:9)
+    at Async._drainQueues (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:102:5)
+    at Immediate.Async.drainQueues [as _onImmediate] (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:15:14)
+From previous event:
+    at Promise.longStackTracesCaptureStackTrace [as _captureStackTrace] (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_bluebird@3.7.2@bluebird/js/release/debuggability.js:482:19)
+    at Function.Promise.attempt.Promise.try (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_bluebird@3.7.2@bluebird/js/release/method.js:29:9)
+    at Sequelize.query (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_sequelize@5.21.3@sequelize/lib/sequelize.js:580:23)
+    at Sequelize.authenticate (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_sequelize@5.21.3@sequelize/lib/sequelize.js:892:17)
+    at authenticate (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:134:22)
+    at authenticate (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:142:13)
+    at async authenticate (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:142:7)
+    at async authenticate (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:142:7)
+    at async Promise.all (index 0)
+    at async /Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:40:5
+name: "SequelizeAccessDeniedError"
+parent: {"code":"ER_ACCESS_DENIED_ERROR","errno":1045,"sqlState":"28000","sqlMessage":"Access denied for user 'root'@'172.17.0.1' (using password: NO)"}
+original: {"code":"ER_ACCESS_DENIED_ERROR","errno":1045,"sqlState":"28000","sqlMessage":"Access denied for user 'root'@'172.17.0.1' (using password: NO)"}
+pid: 53860
+hostname: RobindeMacBook-Pro.local
+
+2020-01-08 09:49:41,797 ERROR 54134 nodejs.SequelizeAccessDeniedError: Access denied for user 'root'@'172.17.0.1' (using password: NO)
+    at /Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_sequelize@5.21.3@sequelize/lib/dialects/mysql/connection-manager.js:125:19
+    at tryCatcher (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_bluebird@3.7.2@bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:547:31)
+    at Promise._settlePromise (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:604:18)
+    at Promise._settlePromise0 (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:649:10)
+    at Promise._settlePromises (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:725:18)
+    at _drainQueueStep (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:93:12)
+    at _drainQueue (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:86:9)
+    at Async._drainQueues (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:102:5)
+    at Immediate.Async.drainQueues [as _onImmediate] (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:15:14)
+From previous event:
+    at Promise.longStackTracesCaptureStackTrace [as _captureStackTrace] (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_bluebird@3.7.2@bluebird/js/release/debuggability.js:482:19)
+    at Function.Promise.attempt.Promise.try (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_bluebird@3.7.2@bluebird/js/release/method.js:29:9)
+    at Sequelize.query (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_sequelize@5.21.3@sequelize/lib/sequelize.js:580:23)
+    at Sequelize.authenticate (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_sequelize@5.21.3@sequelize/lib/sequelize.js:892:17)
+    at authenticate (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:134:22)
+    at authenticate (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:142:13)
+    at async authenticate (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:142:7)
+    at async authenticate (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:142:7)
+    at async Promise.all (index 0)
+    at async /Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:40:5
+name: "SequelizeAccessDeniedError"
+parent: {"code":"ER_ACCESS_DENIED_ERROR","errno":1045,"sqlState":"28000","sqlMessage":"Access denied for user 'root'@'172.17.0.1' (using password: NO)"}
+original: {"code":"ER_ACCESS_DENIED_ERROR","errno":1045,"sqlState":"28000","sqlMessage":"Access denied for user 'root'@'172.17.0.1' (using password: NO)"}
+pid: 54134
+hostname: RobindeMacBook-Pro.local
+
+2020-01-08 09:56:23,527 ERROR 56709 [-/::1/-/7ms GET /user] nodejs.TypeError: Cannot read property 'findAll' of undefined
+    at UserService.getAll (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/app/service/user.js:12:38)
+    at UserController.index (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/app/controller/user.js:13:39)
+    at Object.callFn (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-core@4.17.4@egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-core@4.17.4@egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:44:32)
+    at next (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:45:18)
+    at /Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:44:32)
+    at /Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:36:12
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at /Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-development@2.4.3@egg-development/app/middleware/egg_loader_trace.js:9:56
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at i18n (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-i18n@2.1.1@egg-i18n/app/middleware/i18n.js:13:12)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at dta (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/lib/middlewares/dta.js:12:12)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at xframe (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/lib/middlewares/xframe.js:7:11)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+
+pid: 56709
+hostname: RobindeMacBook-Pro.local
+
+2020-01-08 09:57:33,414 ERROR 57175 [-/::1/-/12ms GET /user] nodejs.TypeError: Cannot read property 'findAll' of undefined
+    at UserService.getAll (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/app/service/user.js:12:38)
+    at UserController.index (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/app/controller/user.js:13:39)
+    at Object.callFn (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-core@4.17.4@egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-core@4.17.4@egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:44:32)
+    at next (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:45:18)
+    at /Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:44:32)
+    at /Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:36:12
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at /Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-development@2.4.3@egg-development/app/middleware/egg_loader_trace.js:9:56
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at i18n (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-i18n@2.1.1@egg-i18n/app/middleware/i18n.js:13:12)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at dta (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/lib/middlewares/dta.js:12:12)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at xframe (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/lib/middlewares/xframe.js:7:11)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+
+pid: 57175
+hostname: RobindeMacBook-Pro.local
+
+2020-01-08 09:58:23,223 ERROR 57388 [-/::1/-/5ms GET /user] nodejs.TypeError: Cannot read property 'findAll' of undefined
+    at UserService.getAll (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/app/service/user.js:12:38)
+    at UserController.index (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/app/controller/user.js:13:39)
+    at Object.callFn (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-core@4.17.4@egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-core@4.17.4@egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:44:32)
+    at next (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:45:18)
+    at /Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:44:32)
+    at /Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:36:12
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at /Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-development@2.4.3@egg-development/app/middleware/egg_loader_trace.js:9:56
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at i18n (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-i18n@2.1.1@egg-i18n/app/middleware/i18n.js:13:12)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at dta (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/lib/middlewares/dta.js:12:12)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at xframe (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/lib/middlewares/xframe.js:7:11)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+
+pid: 57388
+hostname: RobindeMacBook-Pro.local
+
+2020-01-08 10:02:21,929 ERROR 58965 [-/::1/-/6ms GET /user] nodejs.TypeError: Cannot read property 'findAll' of undefined
+    at UserService.getAll (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/app/service/user.js:12:38)
+    at UserController.index (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/app/controller/user.js:13:39)
+    at Object.callFn (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-core@4.17.4@egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-core@4.17.4@egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:44:32)
+    at next (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:45:18)
+    at /Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:44:32)
+    at /Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:36:12
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at /Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-development@2.4.3@egg-development/app/middleware/egg_loader_trace.js:9:56
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at i18n (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-i18n@2.1.1@egg-i18n/app/middleware/i18n.js:13:12)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at dta (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/lib/middlewares/dta.js:12:12)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at xframe (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/lib/middlewares/xframe.js:7:11)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+
+pid: 58965
+hostname: RobindeMacBook-Pro.local
+

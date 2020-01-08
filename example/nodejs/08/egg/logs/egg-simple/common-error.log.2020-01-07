@@ -1,0 +1,8 @@
+2020-01-07 23:46:25,633 ERROR 63150 nodejs.ClusterClientNoResponseError: client no response in 2187404ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_cluster-client@3.0.1@cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:531:17)
+    at processTimers (internal/timers.js:475:7)
+name: "ClusterClientNoResponseError"
+pid: 63150
+hostname: RobindeMacBook-Pro.local
+

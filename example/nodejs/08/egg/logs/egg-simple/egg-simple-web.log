@@ -1,0 +1,185 @@
+2020-01-08 09:49:00,064 WARN 53860 Sequelize Error: Access denied for user 'root'@'172.17.0.1' (using password: NO), sleep 1 seconds to retry...
+2020-01-08 09:49:01,102 WARN 53860 Sequelize Error: Access denied for user 'root'@'172.17.0.1' (using password: NO), sleep 1 seconds to retry...
+2020-01-08 09:49:02,113 WARN 53860 Sequelize Error: Access denied for user 'root'@'172.17.0.1' (using password: NO), sleep 1 seconds to retry...
+2020-01-08 09:49:03,130 ERROR 53860 [-/127.0.0.1/-/0ms GET /] nodejs.SequelizeAccessDeniedError: Access denied for user 'root'@'172.17.0.1' (using password: NO)
+    at /Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_sequelize@5.21.3@sequelize/lib/dialects/mysql/connection-manager.js:125:19
+    at tryCatcher (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_bluebird@3.7.2@bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:547:31)
+    at Promise._settlePromise (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:604:18)
+    at Promise._settlePromise0 (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:649:10)
+    at Promise._settlePromises (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:725:18)
+    at _drainQueueStep (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:93:12)
+    at _drainQueue (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:86:9)
+    at Async._drainQueues (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:102:5)
+    at Immediate.Async.drainQueues [as _onImmediate] (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:15:14)
+From previous event:
+    at Promise.longStackTracesCaptureStackTrace [as _captureStackTrace] (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_bluebird@3.7.2@bluebird/js/release/debuggability.js:482:19)
+    at Function.Promise.attempt.Promise.try (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_bluebird@3.7.2@bluebird/js/release/method.js:29:9)
+    at Sequelize.query (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_sequelize@5.21.3@sequelize/lib/sequelize.js:580:23)
+    at Sequelize.authenticate (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_sequelize@5.21.3@sequelize/lib/sequelize.js:892:17)
+    at authenticate (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:134:22)
+    at authenticate (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:142:13)
+    at async authenticate (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:142:7)
+    at async authenticate (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:142:7)
+    at async Promise.all (index 0)
+    at async /Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:40:5
+name: "SequelizeAccessDeniedError"
+parent: {"code":"ER_ACCESS_DENIED_ERROR","errno":1045,"sqlState":"28000","sqlMessage":"Access denied for user 'root'@'172.17.0.1' (using password: NO)"}
+original: {"code":"ER_ACCESS_DENIED_ERROR","errno":1045,"sqlState":"28000","sqlMessage":"Access denied for user 'root'@'172.17.0.1' (using password: NO)"}
+pid: 53860
+hostname: RobindeMacBook-Pro.local
+
+2020-01-08 09:52:29,866 INFO 55276 [egg-sequelize](13ms) Executed (default): SELECT 1+1 AS result
+2020-01-08 09:53:25,807 INFO 55632 [egg-sequelize](6ms) Executed (default): SELECT 1+1 AS result
+2020-01-08 09:55:24,099 INFO 56371 [egg-sequelize](4ms) Executed (default): SELECT 1+1 AS result
+2020-01-08 09:56:14,385 INFO 56709 [egg-sequelize](6ms) Executed (default): SELECT 1+1 AS result
+2020-01-08 09:56:23,528 ERROR 56709 [-/::1/-/7ms GET /user] nodejs.TypeError: Cannot read property 'findAll' of undefined
+    at UserService.getAll (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/app/service/user.js:12:38)
+    at UserController.index (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/app/controller/user.js:13:39)
+    at Object.callFn (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-core@4.17.4@egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-core@4.17.4@egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:44:32)
+    at next (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:45:18)
+    at /Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:44:32)
+    at /Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:36:12
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at /Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-development@2.4.3@egg-development/app/middleware/egg_loader_trace.js:9:56
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at i18n (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-i18n@2.1.1@egg-i18n/app/middleware/i18n.js:13:12)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at dta (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/lib/middlewares/dta.js:12:12)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at xframe (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/lib/middlewares/xframe.js:7:11)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+
+pid: 56709
+hostname: RobindeMacBook-Pro.local
+
+2020-01-08 09:57:30,249 INFO 57175 [egg-sequelize](2ms) Executed (default): SELECT 1+1 AS result
+2020-01-08 09:57:33,415 ERROR 57175 [-/::1/-/12ms GET /user] nodejs.TypeError: Cannot read property 'findAll' of undefined
+    at UserService.getAll (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/app/service/user.js:12:38)
+    at UserController.index (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/app/controller/user.js:13:39)
+    at Object.callFn (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-core@4.17.4@egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-core@4.17.4@egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:44:32)
+    at next (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:45:18)
+    at /Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:44:32)
+    at /Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:36:12
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at /Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-development@2.4.3@egg-development/app/middleware/egg_loader_trace.js:9:56
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at i18n (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-i18n@2.1.1@egg-i18n/app/middleware/i18n.js:13:12)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at dta (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/lib/middlewares/dta.js:12:12)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at xframe (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/lib/middlewares/xframe.js:7:11)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+
+pid: 57175
+hostname: RobindeMacBook-Pro.local
+
+2020-01-08 09:58:02,595 INFO 57388 [egg-sequelize](3ms) Executed (default): SELECT 1+1 AS result
+2020-01-08 09:58:23,234 ERROR 57388 [-/::1/-/5ms GET /user] nodejs.TypeError: Cannot read property 'findAll' of undefined
+    at UserService.getAll (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/app/service/user.js:12:38)
+    at UserController.index (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/app/controller/user.js:13:39)
+    at Object.callFn (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-core@4.17.4@egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-core@4.17.4@egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:44:32)
+    at next (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:45:18)
+    at /Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:44:32)
+    at /Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:36:12
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at /Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-development@2.4.3@egg-development/app/middleware/egg_loader_trace.js:9:56
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at i18n (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-i18n@2.1.1@egg-i18n/app/middleware/i18n.js:13:12)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at dta (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/lib/middlewares/dta.js:12:12)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at xframe (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/lib/middlewares/xframe.js:7:11)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+
+pid: 57388
+hostname: RobindeMacBook-Pro.local
+
+2020-01-08 10:02:16,460 INFO 58965 [egg-sequelize](3ms) Executed (default): SELECT 1+1 AS result
+2020-01-08 10:02:16,749 INFO 58965 [egg-sequelize](287ms) Executed (default): DROP TABLE IF EXISTS `users`;
+2020-01-08 10:02:17,127 INFO 58965 [egg-sequelize](373ms) Executed (default): CREATE TABLE IF NOT EXISTS `users` (`id` INTEGER NOT NULL auto_increment , `name` VARCHAR(30), PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2020-01-08 10:02:17,339 INFO 58965 [egg-sequelize](210ms) Executed (default): SHOW INDEX FROM `users`
+2020-01-08 10:02:21,944 ERROR 58965 [-/::1/-/6ms GET /user] nodejs.TypeError: Cannot read property 'findAll' of undefined
+    at UserService.getAll (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/app/service/user.js:12:38)
+    at UserController.index (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/app/controller/user.js:13:39)
+    at Object.callFn (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-core@4.17.4@egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-core@4.17.4@egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:44:32)
+    at next (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:45:18)
+    at /Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:44:32)
+    at /Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@3.2.1@koa-compose/index.js:36:12
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_@eggjs_router@2.0.0@@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at /Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-development@2.4.3@egg-development/app/middleware/egg_loader_trace.js:9:56
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at i18n (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-i18n@2.1.1@egg-i18n/app/middleware/i18n.js:13:12)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at dta (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/lib/middlewares/dta.js:12:12)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+    at xframe (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/lib/middlewares/xframe.js:7:11)
+    at dispatch (/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_koa-compose@4.1.0@koa-compose/index.js:42:32)
+
+pid: 58965
+hostname: RobindeMacBook-Pro.local
+
+2020-01-08 10:03:29,182 INFO 59453 [egg-sequelize](2ms) Executed (default): SELECT 1+1 AS result
+2020-01-08 10:03:29,337 INFO 59453 [egg-sequelize](152ms) Executed (default): DROP TABLE IF EXISTS `users`;
+2020-01-08 10:03:29,425 INFO 59453 [egg-sequelize](66ms) Executed (default): CREATE TABLE IF NOT EXISTS `users` (`id` INTEGER NOT NULL auto_increment , `name` VARCHAR(30), PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2020-01-08 10:03:29,447 INFO 59453 [egg-sequelize](20ms) Executed (default): SHOW INDEX FROM `users`
+2020-01-08 10:03:33,246 INFO 59453 [egg-sequelize](50ms) Executed (default): SELECT `id`, `name` FROM `users` AS `user`;
+2020-01-08 10:06:39,967 INFO 60668 [egg-sequelize](2ms) Executed (default): SELECT 1+1 AS result
+2020-01-08 10:06:40,101 INFO 60668 [egg-sequelize](131ms) Executed (default): DROP TABLE IF EXISTS `users`;
+2020-01-08 10:06:40,213 INFO 60668 [egg-sequelize](86ms) Executed (default): CREATE TABLE IF NOT EXISTS `users` (`id` INTEGER NOT NULL auto_increment , `name` VARCHAR(30), PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2020-01-08 10:06:40,241 INFO 60668 [egg-sequelize](27ms) Executed (default): SHOW INDEX FROM `users`
+2020-01-08 10:06:54,891 INFO 60668 [egg-sequelize](10ms) Executed (default): SELECT `id`, `name` FROM `users` AS `user`;
+2020-01-08 10:06:55,001 INFO 60668 [egg-sequelize](113ms) Executed (default): INSERT INTO `users` (`id`,`name`) VALUES (DEFAULT,?);
+2020-01-08 10:07:09,129 INFO 60850 [egg-sequelize](3ms) Executed (default): SELECT 1+1 AS result
+2020-01-08 10:07:09,177 INFO 60850 [egg-sequelize](46ms) Executed (default): DROP TABLE IF EXISTS `users`;
+2020-01-08 10:07:09,229 INFO 60850 [egg-sequelize](48ms) Executed (default): CREATE TABLE IF NOT EXISTS `users` (`id` INTEGER NOT NULL auto_increment , `name` VARCHAR(30), PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2020-01-08 10:07:09,255 INFO 60850 [egg-sequelize](21ms) Executed (default): SHOW INDEX FROM `users`
+2020-01-08 10:07:11,764 INFO 60850 [egg-sequelize](8ms) Executed (default): SELECT `id`, `name` FROM `users` AS `user`;
+2020-01-08 10:11:08,440 INFO 62318 [egg-sequelize](3ms) Executed (default): SELECT 1+1 AS result
+2020-01-08 10:11:08,551 INFO 62318 [egg-sequelize](91ms) Executed (default): DROP TABLE IF EXISTS `users`;
+2020-01-08 10:11:08,614 INFO 62318 [egg-sequelize](60ms) Executed (default): CREATE TABLE IF NOT EXISTS `users` (`id` INTEGER NOT NULL auto_increment , `name` VARCHAR(30), PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2020-01-08 10:11:08,642 INFO 62318 [egg-sequelize](26ms) Executed (default): SHOW INDEX FROM `users`
+2020-01-08 10:11:34,459 INFO 62318 [egg-sequelize](9ms) Executed (default): SELECT `id`, `name` FROM `users` AS `user`;
+2020-01-08 10:11:34,563 INFO 62318 [egg-sequelize](112ms) Executed (default): INSERT INTO `users` (`id`,`name`) VALUES (DEFAULT,?);
+2020-01-08 10:11:38,238 INFO 62318 [egg-sequelize](29ms) Executed (default): SELECT `id`, `name` FROM `users` AS `user`;
+2020-01-08 10:11:38,365 INFO 62318 [egg-sequelize](156ms) Executed (default): INSERT INTO `users` (`id`,`name`) VALUES (DEFAULT,?);
+2020-01-08 10:11:42,176 INFO 62318 [egg-sequelize](15ms) Executed (default): SELECT `id`, `name` FROM `users` AS `user`;
+2020-01-08 10:11:42,239 INFO 62318 [egg-sequelize](77ms) Executed (default): INSERT INTO `users` (`id`,`name`) VALUES (DEFAULT,?);
+2020-01-08 10:11:51,998 INFO 62601 [egg-sequelize](3ms) Executed (default): SELECT 1+1 AS result
+2020-01-08 10:11:52,091 INFO 62601 [egg-sequelize](86ms) Executed (default): DROP TABLE IF EXISTS `users`;
+2020-01-08 10:11:52,167 INFO 62601 [egg-sequelize](70ms) Executed (default): CREATE TABLE IF NOT EXISTS `users` (`id` INTEGER NOT NULL auto_increment , `name` VARCHAR(30), PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2020-01-08 10:11:52,197 INFO 62601 [egg-sequelize](27ms) Executed (default): SHOW INDEX FROM `users`
+2020-01-08 10:11:55,944 INFO 62601 [egg-sequelize](15ms) Executed (default): SELECT `id`, `name` FROM `users` AS `user`;
+2020-01-08 10:11:56,091 INFO 62601 [egg-sequelize](159ms) Executed (default): INSERT INTO `users` (`id`,`name`) VALUES (DEFAULT,?);
+2020-01-08 10:11:59,637 INFO 62601 [egg-sequelize](8ms) Executed (default): SELECT `id`, `name` FROM `users` AS `user`;
+2020-01-08 10:11:59,736 INFO 62601 [egg-sequelize](107ms) Executed (default): INSERT INTO `users` (`id`,`name`) VALUES (DEFAULT,?);
+2020-01-08 10:12:08,436 INFO 62601 [egg-sequelize](33ms) Executed (default): SELECT `id`, `name` FROM `users` AS `user`;
+2020-01-08 10:12:08,507 INFO 62601 [egg-sequelize](104ms) Executed (default): INSERT INTO `users` (`id`,`name`) VALUES (DEFAULT,?);

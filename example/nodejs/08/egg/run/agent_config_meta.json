@@ -1,0 +1,303 @@
+{
+  "keys": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/config/config.default.js",
+  "middleware": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/config/config.default.js",
+  "sequelize": {
+    "dialect": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/config/config.default.js",
+    "host": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/config/config.default.js",
+    "port": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/config/config.default.js",
+    "username": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/config/config.default.js",
+    "password": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/config/config.default.js",
+    "database": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/config/config.default.js"
+  },
+  "session": {
+    "maxAge": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-session@3.1.0@egg-session/config/config.default.js",
+    "key": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-session@3.1.0@egg-session/config/config.default.js",
+    "httpOnly": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-session@3.1.0@egg-session/config/config.default.js",
+    "encrypt": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-session@3.1.0@egg-session/config/config.default.js"
+  },
+  "security": {
+    "domainWhiteList": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/config/config.default.js",
+    "protocolWhiteList": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/config/config.default.js",
+    "defaultMiddleware": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/config/config.default.js",
+    "csrf": {
+      "enable": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/config/config.default.js",
+      "type": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/config/config.default.js",
+      "ignoreJSON": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/config/config.default.js",
+      "useSession": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/config/config.default.js",
+      "cookieName": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/config/config.default.js",
+      "sessionName": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/config/config.default.js",
+      "headerName": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/config/config.default.js",
+      "bodyName": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/config/config.default.js",
+      "queryName": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/config/config.default.js",
+      "refererWhiteList": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/config/config.default.js"
+    },
+    "xframe": {
+      "enable": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/config/config.default.js",
+      "value": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/config/config.default.js"
+    },
+    "hsts": {
+      "enable": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/config/config.local.js",
+      "maxAge": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/config/config.default.js",
+      "includeSubdomains": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/config/config.default.js"
+    },
+    "dta": {
+      "enable": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/config/config.default.js"
+    },
+    "methodnoallow": {
+      "enable": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/config/config.default.js"
+    },
+    "noopen": {
+      "enable": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/config/config.default.js"
+    },
+    "nosniff": {
+      "enable": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/config/config.default.js"
+    },
+    "referrerPolicy": {
+      "enable": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/config/config.default.js",
+      "value": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/config/config.default.js"
+    },
+    "xssProtection": {
+      "enable": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/config/config.default.js",
+      "value": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/config/config.default.js"
+    },
+    "csp": {
+      "enable": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/config/config.default.js",
+      "policy": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/config/config.default.js"
+    },
+    "ssrf": {
+      "ipBlackList": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/config/config.default.js",
+      "checkAddress": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/config/config.default.js"
+    }
+  },
+  "helper": {
+    "shtml": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-security@2.7.1@egg-security/config/config.default.js"
+  },
+  "jsonp": {
+    "limit": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-jsonp@2.0.0@egg-jsonp/config/config.default.js",
+    "callback": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-jsonp@2.0.0@egg-jsonp/config/config.default.js",
+    "csrf": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-jsonp@2.0.0@egg-jsonp/config/config.default.js"
+  },
+  "onerror": {
+    "errorPageUrl": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-onerror@2.1.0@egg-onerror/config/config.default.js",
+    "appErrorFilter": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-onerror@2.1.0@egg-onerror/config/config.default.js",
+    "templatePath": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-onerror@2.1.0@egg-onerror/config/config.default.js"
+  },
+  "i18n": {
+    "defaultLocale": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-i18n@2.1.1@egg-i18n/config/config.default.js",
+    "dirs": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-i18n@2.1.1@egg-i18n/config/config.default.js",
+    "queryField": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-i18n@2.1.1@egg-i18n/config/config.default.js",
+    "cookieField": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-i18n@2.1.1@egg-i18n/config/config.default.js",
+    "cookieDomain": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-i18n@2.1.1@egg-i18n/config/config.default.js",
+    "cookieMaxAge": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-i18n@2.1.1@egg-i18n/config/config.default.js"
+  },
+  "watcher": {
+    "type": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-watcher@3.1.0@egg-watcher/config/config.local.js",
+    "eventSources": {
+      "default": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-watcher@3.1.0@egg-watcher/config/config.default.js",
+      "development": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-watcher@3.1.0@egg-watcher/config/config.default.js"
+    }
+  },
+  "customLogger": {
+    "scheduleLogger": {
+      "consoleLevel": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-schedule@3.6.4@egg-schedule/config/config.default.js",
+      "file": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-schedule@3.6.4@egg-schedule/config/config.default.js"
+    }
+  },
+  "schedule": {
+    "directory": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-schedule@3.6.4@egg-schedule/config/config.default.js"
+  },
+  "multipart": {
+    "mode": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-multipart@2.10.1@egg-multipart/config/config.default.js",
+    "autoFields": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-multipart@2.10.1@egg-multipart/config/config.default.js",
+    "defaultCharset": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-multipart@2.10.1@egg-multipart/config/config.default.js",
+    "fieldNameSize": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-multipart@2.10.1@egg-multipart/config/config.default.js",
+    "fieldSize": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-multipart@2.10.1@egg-multipart/config/config.default.js",
+    "fields": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-multipart@2.10.1@egg-multipart/config/config.default.js",
+    "fileSize": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-multipart@2.10.1@egg-multipart/config/config.default.js",
+    "files": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-multipart@2.10.1@egg-multipart/config/config.default.js",
+    "fileExtensions": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-multipart@2.10.1@egg-multipart/config/config.default.js",
+    "whitelist": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-multipart@2.10.1@egg-multipart/config/config.default.js",
+    "tmpdir": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-multipart@2.10.1@egg-multipart/config/config.default.js",
+    "cleanSchedule": {
+      "cron": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-multipart@2.10.1@egg-multipart/config/config.default.js"
+    }
+  },
+  "development": {
+    "watchDirs": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-development@2.4.3@egg-development/config/config.default.js",
+    "ignoreDirs": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-development@2.4.3@egg-development/config/config.default.js",
+    "fastReady": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-development@2.4.3@egg-development/config/config.default.js",
+    "reloadOnDebug": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-development@2.4.3@egg-development/config/config.default.js",
+    "overrideDefault": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-development@2.4.3@egg-development/config/config.default.js"
+  },
+  "logrotator": {
+    "filesRotateByHour": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-logrotator@3.1.0@egg-logrotator/config/config.default.js",
+    "hourDelimiter": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-logrotator@3.1.0@egg-logrotator/config/config.default.js",
+    "filesRotateBySize": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-logrotator@3.1.0@egg-logrotator/config/config.default.js",
+    "maxFileSize": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-logrotator@3.1.0@egg-logrotator/config/config.default.js",
+    "maxFiles": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-logrotator@3.1.0@egg-logrotator/config/config.default.js",
+    "rotateDuration": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-logrotator@3.1.0@egg-logrotator/config/config.default.js",
+    "maxDays": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-logrotator@3.1.0@egg-logrotator/config/config.default.js"
+  },
+  "static": {
+    "prefix": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-static@2.2.0@egg-static/config/config.default.js",
+    "dir": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-static@2.2.0@egg-static/config/config.default.js",
+    "dynamic": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-static@2.2.0@egg-static/config/config.default.js",
+    "preload": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-static@2.2.0@egg-static/config/config.default.js",
+    "buffer": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-static@2.2.0@egg-static/config/config.default.js",
+    "maxFiles": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-static@2.2.0@egg-static/config/config.default.js"
+  },
+  "view": {
+    "root": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-view@2.1.2@egg-view/config/config.default.js",
+    "cache": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-view@2.1.2@egg-view/config/config.local.js",
+    "defaultExtension": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-view@2.1.2@egg-view/config/config.default.js",
+    "defaultViewEngine": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-view@2.1.2@egg-view/config/config.default.js",
+    "mapping": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg-view@2.1.2@egg-view/config/config.default.js"
+  },
+  "env": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+  "name": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+  "cookies": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+  "proxy": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+  "maxIpsCount": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+  "maxProxyCount": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+  "protocolHeaders": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+  "ipHeaders": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+  "hostHeaders": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+  "pkg": {
+    "name": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+    "version": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+    "description": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+    "private": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+    "egg": {
+      "declarations": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js"
+    },
+    "dependencies": {
+      "egg": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+      "egg-scripts": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+      "egg-sequelize": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+      "mysql2": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js"
+    },
+    "devDependencies": {
+      "autod": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+      "autod-egg": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+      "egg-bin": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+      "egg-ci": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+      "egg-mock": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+      "eslint": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+      "eslint-config-egg": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js"
+    },
+    "engines": {
+      "node": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js"
+    },
+    "scripts": {
+      "start": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+      "stop": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+      "dev": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+      "debug": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+      "test": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+      "test-local": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+      "cov": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+      "lint": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+      "ci": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+      "autod": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js"
+    },
+    "ci": {
+      "version": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js"
+    },
+    "repository": {
+      "type": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+      "url": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js"
+    },
+    "author": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+    "license": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js"
+  },
+  "baseDir": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+  "HOME": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+  "rundir": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+  "dump": {
+    "ignore": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js"
+  },
+  "confusedConfigurations": {
+    "bodyparser": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+    "notFound": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+    "sitefile": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+    "middlewares": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+    "httpClient": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js"
+  },
+  "notfound": {
+    "pageUrl": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js"
+  },
+  "siteFile": {
+    "/favicon.ico": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js"
+  },
+  "bodyParser": {
+    "enable": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+    "encoding": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+    "formLimit": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+    "jsonLimit": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+    "textLimit": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+    "strict": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+    "queryString": {
+      "arrayLimit": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+      "depth": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+      "parameterLimit": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js"
+    },
+    "onerror": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js"
+  },
+  "logger": {
+    "dir": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+    "encoding": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+    "env": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+    "level": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+    "consoleLevel": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+    "disableConsoleAfterReady": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+    "outputJSON": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+    "buffer": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+    "appLogName": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+    "coreLogName": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+    "agentLogName": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+    "errorLogName": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+    "coreLogger": {
+      "consoleLevel": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.local.js"
+    },
+    "allowDebugAtProd": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js"
+  },
+  "httpclient": {
+    "enableDNSCache": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+    "dnsCacheLookupInterval": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+    "dnsCacheMaxLength": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+    "request": {
+      "timeout": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js"
+    },
+    "httpAgent": {
+      "keepAlive": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+      "freeSocketTimeout": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+      "maxSockets": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+      "maxFreeSockets": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js"
+    },
+    "httpsAgent": {
+      "keepAlive": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+      "freeSocketTimeout": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+      "maxSockets": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+      "maxFreeSockets": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js"
+    }
+  },
+  "meta": {
+    "enable": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+    "logging": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js"
+  },
+  "coreMiddleware": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+  "workerStartTimeout": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+  "serverTimeout": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+  "cluster": {
+    "listen": {
+      "path": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+      "port": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+      "hostname": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js"
+    }
+  },
+  "clusterClient": {
+    "maxWaitTime": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js",
+    "responseTimeout": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js"
+  },
+  "onClientError": "/Users/Robin/Downloads/01 git/Learning-WebArchitecture/example/nodejs/08/egg/node_modules/_egg@2.26.0@egg/config/config.default.js"
+}
