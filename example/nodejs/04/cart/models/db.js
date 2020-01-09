@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 // 1.连接
 mongoose.set('useFindAndModify', false)
-mongoose.connect('mongodb://root:root@localhost:27017/learning',{
+mongoose.connect('mongodb://root:123456@localhost:27017/learning',{
   useNewUrlParser: true,
   useUnifiedTopology: true
 })

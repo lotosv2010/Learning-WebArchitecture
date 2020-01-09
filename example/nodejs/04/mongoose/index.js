@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 // 1.连接
-mongoose.connect('mongodb://root:root@localhost:27017/learning',{
+mongoose.connect('mongodb://root:123456@localhost:27017/learning',{
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
@@ -18,16 +18,16 @@ conn.once('open', async() => {
     })
 
     // 3.编译一个Model, 它对应数据库中复数、小写的Collection
-    const Model = mongoose.model('shops', Schema)
+    const Model = mongoose.model('shop', Schema)
 
     // 4.创建，create返回Promise
     let ret 
-    // ret = await Model.create({
-    //   category: '温带水果',
-    //   name: '苹果',
-    //   price: 5
-    // })
-    // console.log('插入数据:', ret)
+    ret = await Model.create({
+      category: '温带水果',
+      name: '苹果',
+      price: 5
+    })
+    console.log('插入数据:', ret)
 
     // 5.查询，find返回Query，它实现了then和catch，可以当Promise使用
     // 如果需要返回Promise，调用其exec()
