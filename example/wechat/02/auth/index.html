@@ -1,0 +1,106 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <script src="https://unpkg.com/vue@2.1.10/dist/vue.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/cube-ui/lib/cube.min.js"></script>
+    <script src="https://cdn.bootcss.com/qs/6.6.0/qs.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/cube-ui/lib/cube.min.css">
+    <style>
+        .cube-btn {
+            margin: 10px 0;
+        }
+        .users li {
+          display: flex;
+          background-color: antiquewhite;
+          /* height: 50px; */
+          /* line-height: 50px; */
+          align-items: center;
+          margin: 10px 0;
+          padding: 0 20px;
+        }
+        .users li p {
+          flex: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <!-- <cube-button @click='getToken'>getTokens</cube-button> -->
+        <cube-button @click='getFollowers'>getFollowers</cube-button>
+        <cube-button @click='login'>登录微信</cube-button>
+        <cube-button @click='getUser'>获取用户信息</cube-button>
+        <cube-button @click='getJSConfig'>获取JSSKConfig</cube-button>
+        <url class="users">
+          <li v-for="(user, index) in swipeData" :key="index">
+            <p><span>name:</span><span>{{ user.nickname }}</span></p>
+            <p><span>address:</span><span>{{ user.country }}{{ user.province }}{{ user.city }}</span></p>
+            <p><img :src="user.headimgurl" alt="" srcset=""></p>
+          </li>
+        </url>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                value: 'input',
+                swipeData: []
+            },
+
+            methods: {
+              async getToken(){
+                const res = await axios.get('/getToken')
+                console.log('res:',res)
+              },
+              async getFollowers(){
+                const res = await axios.get('/getFollowers')
+                const { data } = res
+                this.swipeData = data && data.user_info_list
+                console.log(this.swipeData)
+              },
+              async login() {
+                location.href = '/wxAuthorize'
+              },
+              async getUser() {
+                const qs = Qs.parse(window.location.search.substr(1))
+                const res = await axios.get('/getUser', {
+                    params: {
+                        openid: qs.openid
+                    }
+                })
+                console.log('User', res.data)
+              },
+              async getJSConfig() {
+                  console.log('wx', wx)
+                  const res = await axios.get('/getJSConfig', {
+                      params: {
+                          url: window.location.href
+                      }
+                  })
+                  console.log('res....', res.data)
+                  res.data.jsApiList = ['onMenuShareTimeline', 'onMenuShareAppMessage']
+                  wx.config(res.data);
+                  wx.ready(function () {
+                      console.log('wx.ready......')
+                  })
+                  wx.getNetworkType({
+                      success: function (res) {
+                          // 返回网络类型2g，3g，4g，wifi
+                          var networkType = res.networkType;
+                          console.log('getNetworkType...', networkType)
+                      }
+                  })
+              }
+            },
+            mounted: function () {
+
+            },
+        });
+    </script>
+</body>
+
+</html>
