@@ -809,7 +809,7 @@ if (module.hot) {
 
 
 
-####Babel处理ES6
+#### Babel处理ES6
 
 官方网站：<https://babeljs.io/>
 
@@ -1150,6 +1150,118 @@ scripts:" --env.production"
 
 ### 代码分割 code Splitting
 
-### 打包分析
+```js
+import _ from "lodash";
+console.log(_.join(['a','b','c','****']))
+```
+
+假如我们引入一个第三方的工具库，体积为1mb，而我们的业务逻辑代码也有1mb，那么打包出来的体积大小会在2mb
+- 导致问题: 体积大，加载时间长
+- 业务逻辑会变化，第三方工具库不会，所以业务逻辑一变更，第三方工具库也要跟着变。
+
+
+#### 引入代码分割的概念:
+
+```js
+//lodash.js
+import _ from "lodash"; window._ = _;
+//index.js 注释掉lodash引用 //import _ from "lodash";
+console.log(_.join(['a','b','c','****']))
+
+//webpack.config.js 
+entry: {
+  lodash: "./lodash.js",
+  index: "./index.js"
+},
+//指定打包后的资源位置 
+output: {
+  path: path.resolve(__dirname, "./build"),
+  filename: "[name].js" 
+}
+```
+
+其实code Splitting概念 与 webpack并没有直接的关系，只不过webpack中提供了一种更加方便的方法供我们实现 代码分割
+
+#### 基于[split-chunks-plugin](https://webpack.js.org/plugins/split-chunks-plugin/)
+ 
+```js
+optimization: {
+    splitChunks: {
+      chunks: 'async',//对同步，异步，所有的模块有效
+      minSize: 30000,//当模块大于30kb
+      maxSize: 0,//对模块进行二次分割时使用，不推荐使用
+      minChunks: 1,//打包生成的chunk文件最少有几个chunk引用了这个模块 maxAsyncRequests: 5,//模块请求5次
+      maxInitialRequests: 3,//入口文件同步请求3次 automaticNameDelimiter: '~',
+      name: true,
+      cacheGroups: {
+        vendors: {
+          test: /[\\/]node_modules[\\/]/, priority: -10//优先级 数字越大，优先级越高
+        }, 
+        default: {
+        minChunks: 2,
+        priority: -20, reuseExistingChunk: true
+      }
+    }
+  }
+}
+```
+
+
+使用下面配置即可:
+
+```js
+optimization:{ 
+  //帮我们自动做代码分割 
+  splitChunks:{
+    chunks:"all",//默认是支持异步，我们使用all 
+  }
+}
+```
+
+### [打包分析](https://github.com/webpack/analyse)
+
+#### [官方推荐工具](https://webpack.js.org/guides/code-splitting/#bundle-analysis)
 
 ### webpack 官方推荐的编码方式
+
+```js
+optimization:{ //帮我们自动做代码分割 
+  splitChunks:{
+    chunks:"async",//默认是支持异步 
+  }
+}
+```
+
+代码利用率的问题
+
+```js
+//index.js
+document.addEventListener("click", () => {
+  const element = document.createElement("div"); 
+  element.innerHTML = "welcome to webpack4.x"; 
+  document.body.appendChild(element);
+});
+
+```
+
+通过控制台看看代码利用率
+
+- mac: `command+shift+p -->  show Coverage` 
+
+把里面异步代码抽离出来
+
+```js
+//index.js
+  document.addEventListener("click", () => { import("./click.js").then(({ default: func }) => {
+    //需要用到 npm install --save-dev @babel/plugin-syntax-dynamic-import
+    func(); 
+  });
+});
+//click.js
+function handleClick() {
+  const element = document.createElement("div"); 
+  element.innerHTML = "welcome to webpack4.x"; 
+  document.body.appendChild(element);
+}
+export default handleClick;
+```

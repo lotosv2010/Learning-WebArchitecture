@@ -11,6 +11,7 @@ const commonConfig = {
   entry: './index.js',
   output: {
     filename: 'index.js',
+    chunkFilename: '[name].bundle.js',
     path: path.resolve(__dirname, '../dist')
   },
   module: {
