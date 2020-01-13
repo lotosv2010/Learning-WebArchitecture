@@ -1,20 +1,18 @@
-const webpack = require('webpack')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const merge = require("webpack-merge")
 
-module.exports = {
-  mode: 'development',
+const devConfig = require('./webpack.dev')
+const prodConfig = require('./webpack.prod')
+
+const commonConfig = {
   entry: './index.js',
   output: {
     filename: 'index.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, '../dist')
   },
-  // source-map配置
-  // https://webpack.js.org/configuration/devtool/#devtool
-  devtool: 'cheap-module-eval-source-map', // development
-  // devtool: 'cheap-module-source-map', // production
   module: {
     // 遇到不认识的模块就在这里找loader解决
     rules: [
@@ -102,25 +100,21 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: '[name].css'
-    }),
-    // HMR 热模块替换
-    new webpack.HotModuleReplacementPlugin()
+    })
   ],
-  // devServer
-  devServer: {
-    contentBase: './dist',
-    open: true,
-    port: '8088',
-    // HMR 热模块替换
-    hot: true,
-    // 页面不刷新
-    hotOnly: true,
-    proxy: {
-      '/api': 'http://localhost:3100'
-    }
-  },
   // tree Shaking: 摇树
   optimization: {
-    usedExports: true
+    usedExports: true,
+    splitChunks: {
+      chunks: 'all'
+    }
   }
+}
+
+module.exports = (env)=>{
+  if(env && env.production){
+    return merge(commonConfig,prodConfig)
+  }else{
+    return merge(commonConfig,devConfig)
+  } 
 }

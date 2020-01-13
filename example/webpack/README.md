@@ -1077,3 +1077,79 @@ npm install --save-dev @babel/preset-react
 
 ```
 
+
+### tree Shaking
+webpack2.x开始支持 tree shaking概念，顾名思义，"摇树"，只支持ES module的引入方式!!!!
+
+```js
+//webpack.config.js
+optimization: {
+    usedExports: true
+}
+```
+
+```json
+//package.json
+"sideEffects":false 
+// 正常对所有模块进行tree shaking 
+// 或者 "sideEffects": ['*.css','@babel/polyfill']
+```
+
+开发模式设置后，不会帮助我们把没有引用的代码去掉
+
+案例:
+
+```js
+//expo.js
+export const add = (a, b) => {
+  console.log(a + b); 
+};
+export const minus = (a, b) => {
+  console.log(a - b);
+};
+
+//index.js
+import { add } from "./expo"; add(1, 2);
+```
+
+### development vs Production模式区分打包
+
+```
+npm install webpack-merge -D
+```
+
+案例
+```js
+const merge = require("webpack-merge")
+const commonConfig = require("./webpack.common.js")
+const devConfig = {
+...
+}
+module.exports = merge(commonConfig,devConfig)
+//package.json 
+"scripts":{
+  "dev":"webpack-dev-server --config ./build/webpack.dev.js",
+  "build":"webpack --config ./build/webpack.prod.js"
+}
+```
+
+案例2 基于环境变量
+
+```js
+//外部传入的全局变量 
+module.exports = (env)=>{
+  if(env && env.production){
+    return merge(commonConfig,prodConfig)
+  } else{
+    return merge(commonConfig,devConfig)
+  }
+}
+//外部传入变量
+scripts:" --env.production"
+```
+
+### 代码分割 code Splitting
+
+### 打包分析
+
+### webpack 官方推荐的编码方式
