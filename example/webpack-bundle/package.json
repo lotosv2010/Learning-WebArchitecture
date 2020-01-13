@@ -1,0 +1,17 @@
+{
+  "name": "webpack-bundle",
+  "version": "1.0.0",
+  "description": "webpack bundle",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "robin",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.8.0",
+    "@babel/parser": "^7.8.0",
+    "@babel/preset-env": "^7.8.2",
+    "@babel/traverse": "^7.8.0"
+  }
+}
