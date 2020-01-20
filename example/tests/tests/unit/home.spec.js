@@ -14,6 +14,6 @@ describe('测试home组件', () => {
     let wrapper = mount(Home)
     // 模拟点击
     wrapper.find('.btn').trigger('click')
-    expect(wrapper.vm.message).toBe('click message1')
+    expect(wrapper.vm.message).toBe('click message')
   })
 })
