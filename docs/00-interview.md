@@ -18,7 +18,7 @@
        2. 虚拟dom就是⽤js对象，描述dom结构
     4. vue1的时候，每个组件恩{{}}都有⼀个watcher，vue2⼀个组件只有⼀个watcher， 组
 件内部的众多变量修改，只通知到组件，组件内部虚拟dom diff来算出修改的变量
-#### 2. Object。definproperty的缺点
+#### 2. Object.definproperty的缺点
     1. 数组监听不到
     2. vue拦截数组常⽤⽅法，通知更新
 #### 3. vue的虚拟dom有啥特点
@@ -91,7 +91,7 @@
         2.  定义$mount
         3.  core/index
             1.  initGlobalAPI
-   
+
    ```js
    Vue.util = {
         warn,
