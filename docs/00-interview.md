@@ -44,9 +44,9 @@
     3. initEvents
        1. 初始化vm._events
     4. initRender
-       1. vm._c 就是createElement ， 在compile模块，会⽤到 ___c
+       1. vm._c 就是createElement ， 在compile模块，会⽤到 _c
        2. vm.$createElement 也是createElement （重点看的函数）
-       3. attrs 和 Listeners
+       3. attrs 和 listeners
     5. initInjections
        1. 定了向上查找provide的逻辑 vm._provided
     6. initState data 响应式 都在这 （重要）
@@ -70,7 +70,7 @@
     2.  $delete
     3.  $watch
 ## 6.  eventsMixin
-    1.  on Once off emit 时间存储在 vm._events下⾯
+    1.  on Once off emit 事件存储在 vm._events下⾯
 ## 7. lifecycleMixin
     1.  _update 重要
         1.  数据更新
